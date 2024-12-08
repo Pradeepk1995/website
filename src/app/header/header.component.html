@@ -1,0 +1,21 @@
+<header  *ngIf="showHeader"  id="header"class="header d-flex align-items-center fixed-top" [ngStyle]="headerScrollStyle"   >
+    <div id="wholenav" *ngIf="!showlogedHeader"  class="container-fluid container-xl d-flex  justify-content-between">
+        <nav id="nav1" class="nav1" [ngStyle]="navbarstyle"   >
+            <div><a [routerLink]="['']" >Home</a></div>
+            <div><a  [routerLink]="['about-us']">About Us</a></div>
+            
+              <div ><a ><span>Services</span> <i class="bi bi-chevron-down dropdown-icon"></i></a>
+              <ul *ngIf="showServices" [ngStyle]="showServicesStyle" @dropdown >
+               <li><a [routerLink]="['Ghgmrv']">MRV</a></li>
+               <li><a [routerLink]="['It-solution']">IT Solutions</a></li>
+               <li><a [routerLink]="['LED']">LED Projects</a></li>
+               <li><a [routerLink]="['carbon_pricing']">Carbon Pricing</a></li>
+               <li><a [routerLink]="['ClimateFinanceAndClimateTechnologies']">Climate Finance And Climate Technologies</a></li>
+               <li><a [routerLink]="['ProjectManagement']">Project Management</a></li>
+              </ul>
+            </div>
+        </nav>
+    </div>
+
+
+</header>
